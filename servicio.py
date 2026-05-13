@@ -1,5 +1,12 @@
 from abc import ABC, abstractmethod
-from excepciones import DatoInvalidoError, ServicioNoDisponibleError
+try:
+    from excepciones import DatoInvalidoError, ServicioNoDisponibleError
+except ImportError:
+    class DatoInvalidoError(Exception):
+        pass
+
+    class ServicioNoDisponibleError(Exception):
+        pass
 import logging
 
 logging.basicConfig(filename="logs.txt", level=logging.ERROR, format="%(asctime)s - %(levelname)s - %(message)s")
