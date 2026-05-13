@@ -4,8 +4,7 @@ from reserva import Reserva
 
 def guardar_log(error):
    with open("logs.txt", "a") as f:
-       f.write(error + "\n")
-
+       f.write(error + "\n"
 print("INICIO DEL SISTEMA")
 
 # Caso correcto
